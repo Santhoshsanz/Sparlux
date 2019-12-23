@@ -7,29 +7,24 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 
-const routes: Routes = [{
-  path: 'login',
-  component: LoginLayoutComponent,
-  children: [
-    {
-      path: '',
-      component: LoginComponent
-    },
-    {
-      path: 'ForgotPassword',
-      component: LoginForgotComponent
-    },
-    {
-      path: 'PrivacyPolicy',
-      component: PrivacyPolicyComponent
-    }
-  ]
-},
-{
-  path: '',
-  pathMatch: 'full',
-  redirectTo: 'login'
-}];
+const routes: Routes = [
+  {
+    path: '',
+    component: LoginComponent
+  },
+  {
+    path: 'ForgotPassword',
+    component: LoginForgotComponent
+  },
+  {
+    path: 'PrivacyPolicy',
+    component: PrivacyPolicyComponent
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: ''
+  }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

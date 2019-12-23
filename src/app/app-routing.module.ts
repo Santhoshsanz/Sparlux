@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./modules/iop-module/iop-module.module').then(m => m.IopModuleModule),
-    canActivate: [AuthGuard]
+    canActivate: []
   },
   {
     path: 'login',

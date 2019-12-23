@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [{
   path: 'home',
   component: DashboardLayoutComponent,
-  canActivate: [AuthGuard],
+  canActivate: [],
   children: [
     {
       path: '',

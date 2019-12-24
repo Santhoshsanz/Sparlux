@@ -3,9 +3,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   loadChildren: () => import('./modules/iop-module/iop-module.module').then(m => m.IopModuleModule),
+  //   canActivate: []
+  // },
   {
     path: '',
-    loadChildren: () => import('./modules/iop-module/iop-module.module').then(m => m.IopModuleModule),
+    loadChildren: () => import('./modules/sparlux-module/sparlux-module.module').then(m => m.SparluxModuleModule),
     canActivate: []
   },
   {
